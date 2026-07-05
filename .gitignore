@@ -1,0 +1,10 @@
+# Build artifacts
+/build/
+/dist/
+/dep/
+/plugin.dylib
+/plugin.so
+/plugin.dll
+
+# Materialised at dist time from the opc submodule (see Makefile)
+/res/

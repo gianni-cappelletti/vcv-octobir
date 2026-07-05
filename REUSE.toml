@@ -1,0 +1,14 @@
+version = 1
+
+[[annotations]]
+path = [
+    "Makefile",
+    "plugin.json",
+    "README.md",
+    "REUSE.toml",
+    ".gitignore",
+    ".gitmodules",
+    ".github/workflows/**",
+]
+SPDX-FileCopyrightText = "2024-2026 October Production Co."
+SPDX-License-Identifier = "GPL-3.0-only"
