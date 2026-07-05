@@ -33,8 +33,8 @@ res/          materialised from opc/ at build time (git-ignored)
 `Makefile` includes `$(RACK_DIR)/plugin.mk`, providing the standard `clean`,
 `cleandep`, `dep`, and `dist` targets. Wrapper-specific behaviour:
 
-- `make dep` initialises the `opc` submodule and its WDL sub-submodule only, not
-  the monorepo's JUCE or NeuralAmpModelerCore submodules.
+- `make dep` initialises the `opc` submodule and its WDL and pffft sub-submodules
+  only, not the monorepo's JUCE or NeuralAmpModelerCore submodules.
 - `res/` is copied from the submodule at `dist` time. `plugin.mk` packages
   `DISTRIBUTABLES` with path-preserving flags (`rsync -rR` / `cp --parents`) and
   requires a top-level `res/`.

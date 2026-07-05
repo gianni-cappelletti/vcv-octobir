@@ -7,8 +7,8 @@ name: Build
 #     redistributed in a public toolchain image.
 # This produces the same four .vcvplugin artifacts (mac-x64, mac-arm64, win-x64,
 # lin-x64) the farm publishes. The `provisioning-check` job is an extra, fast
-# native build that verifies `make dep` self-provisions the opc + WDL submodules
-# (the path the farm relies on when it does not pre-init nested submodules).
+# native build that verifies `make dep` self-provisions the opc + WDL + pffft
+# submodules (the path the farm relies on when it does not pre-init nested submodules).
 
 on:
   push:
@@ -28,7 +28,7 @@ defaults:
 
 jobs:
   # Fast feedback + validates self-provisioning: no submodules are checked out,
-  # so `make dep` must initialise opc and its WDL dependency itself. Not a
+  # so `make dep` must initialise opc and its WDL + pffft dependencies itself. Not a
   # farm-exact build (native ubuntu toolchain), so it is not shipped.
   provisioning-check:
     name: Provisioning check (lin-x64, native)
